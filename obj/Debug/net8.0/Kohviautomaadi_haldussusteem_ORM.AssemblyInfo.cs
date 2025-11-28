@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kohviautomaadi_haldussusteem_ORM")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e011cef5e3b0253548f21b65084cf122d33df6cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13c757068936fb212cacfc0d0dc4ae782b729cdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kohviautomaadi_haldussusteem_ORM")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kohviautomaadi_haldussusteem_ORM")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

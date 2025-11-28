@@ -1,0 +1,309 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\drinkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\drinkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\models\\actionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:models\\actionlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|c:\\users\\opilane\\source\\repos\\kohviautomaadi_haldussusteem_orm\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E505C071-E670-4C6E-8D5B-0FFD6F8DDF01}|Kohviautomaadi_haldussusteem_ORM.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrinksController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\DrinksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DrinksController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\DrinksController.cs",
+              "RelativeToolTip": "Controllers\\DrinksController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:09:36.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:07:05.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:06:40.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:06:31.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Drink.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Drink.cs",
+              "RelativeDocumentMoniker": "Models\\Drink.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Drink.cs",
+              "RelativeToolTip": "Models\\Drink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:06:18.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:05:50.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ActionLog.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\ActionLog.cs",
+              "RelativeDocumentMoniker": "Models\\ActionLog.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\ActionLog.cs",
+              "RelativeToolTip": "Models\\ActionLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:05:34.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:05:18.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:02:08.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T12:52:57.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T12:12:29.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:02:50.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T13:04:47.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T12:52:09.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\opilane\\source\\repos\\Kohviautomaadi_haldussusteem_ORM\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T12:17:20.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1883,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
