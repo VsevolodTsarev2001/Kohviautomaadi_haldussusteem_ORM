@@ -1,4 +1,5 @@
 ﻿namespace Kohviautomaadi_haldussusteem_ORM.Models
+
 {
     public class User
     {
