@@ -1,0 +1,6 @@
+@Kohviautomaadi_haldussusteem_ORM_HostAddress = http://localhost:5190
+
+GET {{Kohviautomaadi_haldussusteem_ORM_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
