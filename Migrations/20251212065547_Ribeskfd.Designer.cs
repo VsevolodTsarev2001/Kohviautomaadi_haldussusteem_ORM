@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kohviautomaadi_haldussusteem_ORM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251211145408_ArticleUpdate")]
-    partial class ArticleUpdate
+    [Migration("20251212065547_Ribeskfd")]
+    partial class Ribeskfd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -107,7 +107,7 @@ namespace Kohviautomaadi_haldussusteem_ORM.Migrations
                     b.Property<int>("DrinkId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("OrderId")
+                    b.Property<int>("OrderId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -136,7 +136,7 @@ namespace Kohviautomaadi_haldussusteem_ORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Kohviautomaadi_haldussusteem_ORM.Models.User", b =>
@@ -199,11 +199,15 @@ namespace Kohviautomaadi_haldussusteem_ORM.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Kohviautomaadi_haldussusteem_ORM.Models.Order", null)
+                    b.HasOne("Kohviautomaadi_haldussusteem_ORM.Models.Order", "Order")
                         .WithMany("Items")
-                        .HasForeignKey("OrderId");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Drink");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("Kohviautomaadi_haldussusteem_ORM.Models.User", b =>

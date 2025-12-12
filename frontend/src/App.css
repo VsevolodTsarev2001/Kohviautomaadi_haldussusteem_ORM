@@ -1,182 +1,786 @@
-/* ====== GLOBAL ====== */
+/* ================================
+   ☕ PREMIUM COFFEE MACHINE ☕
+   TESTED & WORKING DESIGN
+   ================================ */
+
+/* Импорт современных шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+/* Глобальный сброс */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ГЛОБАЛЬНОЕ ПЕРЕОПРЕДЕЛЕНИЕ СВЕТЛЫХ ФОНОВ */
+div[style*="background: #f"],
+div[style*="background: white"],
+div[style*="backgroundColor: #f"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+div[style*="color: #666"],
+div[style*="color: #999"],
+span[style*="color: #666"] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ========== АНИМАЦИИ ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========== ОСНОВНЫЕ СТИЛИ ========== */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #f9efe3 0%, #ecdac3 100%);
-    font-family: "Poppins", sans-serif;
-    color: #3d2b1f;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+  padding: 20px !important;
+  color: #ffffff !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  margin: 0 !important;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 46px;
-    color: #5a3824;
-    font-weight: 700;
-    text-shadow: 3px 3px 0 #f1d7b7;
+/* Декоративные элементы фона */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* APP WRAPPER */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
 .App {
-    max-width: 1250px;
-    margin: auto;
-    padding: 30px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
-/* ===== GRID LAYOUT ===== */
-.container {
-    display: grid;
-    grid-template-columns: 1.8fr 1.2fr;
-    gap: 30px;
-    margin-top: 25px;
-}
-
-/* ===== CARD BOXES ===== */
-.card {
-    background: rgba(255,255,255,0.85);
-    border-radius: 22px;
-    padding: 28px;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-    transition: 0.25s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-}
-
-/* ===== DRINK LIST ===== */
-ul { list-style: none; padding: 0; }
-
-.drink-item {
-    padding: 15px 20px;
-    margin-bottom: 14px;
-    background: #fff5e6;
-    border-radius: 14px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition:.25s;
-    font-size: 17px;
-}
-
-.drink-item:hover {
-    background:#ffe7c7;
-    transform: scale(1.03);
-}
-
-/* ===== BUTTONS ===== */
-button {
-    background: linear-gradient(135deg,#a86b35,#d89a57);
-    color: white;
-    padding: 12px 22px;
-    font-size: 15px;
-    border-radius: 10px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition:.25s;
-}
-
-button:hover {
-    transform: scale(1.08);
-    filter: brightness(1.15);
-}
-
-button:active {
-    transform: scale(0.97);
-    filter: brightness(.85);
-}
-
-/* FORM INPUTS */
-input, select {
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #c9a276;
-    background:#fff7ec;
-    font-size: 15px;
-    transition:.2s;
-}
-
-input:focus, select:focus {
-    outline:none;
-    border-color:#d58e4c;
-    box-shadow:0 0 6px #d58e4caa;
-}
-
-/* ===== ORDER HISTORY ===== */
-.order-block {
-    background:#fff1dd;
-    padding:16px;
-    border-radius:14px;
-    margin-bottom:14px;
-    border-left:6px solid #c67b2f;
-    transition:0.25s;
-    font-size:16px;
-}
-
-.order-block:hover {
-    background:#ffe3c2;
-    transform:translateX(6px);
-}
-
-/* ===== LOGIN + REGISTER FORM ===== */
-.form-card {
-    width: 380px;
-    margin: 100px auto;
-    padding: 30px 26px;
-    background: rgba(255,255,255,.95);
-    border-radius: 18px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 35px rgba(0,0,0,.18);
-    display:flex;
-    flex-direction: column;
-    gap:14px;
-    animation: fadeIn .8s ease;
-}
-
-.form-card input,
-.form-card button {
-    padding:14px;
-    border-radius:10px;
-    font-size:16px;
-}
-
-/* REGISTRATION LINK */
-.link-btn {
-    background:none;
-    border:none;
-    color:#6c5ce7;
-    cursor:pointer;
-    text-decoration:underline;
-    font-size:15px;
-    margin-top:4px;
-}
-
-/* ===== TOP NAV ===== */
+/* ========== ВЕРХНЯЯ ПАНЕЛЬ ========== */
 .top-bar {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 30px;
-    font-size:22px;
-    background:#6c5ce7;
-    color:white;
-    box-shadow:0 4px 20px rgba(0,0,0,.25);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 25px 50px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.top-bar:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 25px 80px rgba(139, 92, 246, 0.2);
+  transform: translateY(-3px);
+}
+
+.top-bar h2 {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logout-btn {
-    background:white;
-    color:#6c5ce7;
-    font-weight:700;
-    padding:10px 18px;
-    border-radius:8px;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.logout-btn:hover { background:#ddd; }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeIn {
-    from{ opacity:0; transform:translateY(20px); }
-    to{ opacity:1; transform:translateY(0); }
+.logout-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(239, 68, 68, 0.5);
+}
+
+/* ========== КОНТЕЙНЕР И СЕТКА ========== */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* ========== КАРТОЧКИ ========== */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #a78bfa 0%, #ec4899 50%, #fbbf24 100%);
+  border-radius: 30px 30px 0 0;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 30px 80px rgba(139, 92, 246, 0.3);
+}
+
+.card h2 {
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid rgba(167, 139, 250, 0.3);
+  padding-bottom: 20px;
+  letter-spacing: -1px;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ========== СПИСОК НАПИТКОВ ========== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drink-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: slideIn 0.5s ease-out backwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.drink-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #a78bfa 0%, #ec4899 100%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.drink-item:hover::before {
+  transform: scaleY(1);
+}
+
+.drink-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(10px);
+  border-color: rgba(167, 139, 250, 0.3);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.drink-item input, 
+.drink-item select {
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.drink-item input:focus,
+.drink-item select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.drink-item input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.drink-item button {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.drink-item button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+/* ========== ПРЕДПРОСМОТР ЗАКАЗА ========== */
+.order-preview {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 25px;
+  margin-top: 30px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+}
+
+.order-preview h3 {
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.order-preview ul {
+  margin-bottom: 25px;
+}
+
+.order-preview li {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  margin-bottom: 12px;
+  border-radius: 18px;
+  border-left: 5px solid #a78bfa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.order-preview li:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+.order-preview p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.order-preview strong {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 24px;
+}
+
+.order-preview button {
+  width: 100%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 18px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-preview button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.order-preview button:hover::before {
+  left: 100%;
+}
+
+.order-preview button:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(16, 185, 129, 0.5);
+}
+
+.order-preview button:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* ========== ФОРМЫ ВХОДА И РЕГИСТРАЦИИ ========== */
+.auth-container {
+  max-width: 500px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 60px;
+  border-radius: 40px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.auth-container h2 {
+  text-align: center;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 50%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 40px;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  font-family: 'Playfair Display', serif;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 18px 24px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.auth-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-container input:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-container select {
+  width: 100%;
+  padding: 18px 24px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.auth-container select option {
+  background: #1a1a2e !important;
+  background-color: #1a1a2e !important;
+  color: #ffffff !important;
+  padding: 10px;
+}
+
+/* Стили для всех select элементов */
+select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+}
+
+select option {
+  background: #1a1a2e !important;
+  background-color: #1a1a2e !important;
+  color: #ffffff !important;
+  padding: 10px;
+}
+
+select:focus option {
+  background: #1a1a2e !important;
+  background-color: #1a1a2e !important;
+}
+
+/* Дополнительное переопределение для всех селектов */
+select[style],
+select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.auth-container select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-container label {
+  color: rgba(255, 255, 255, 0.9);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.auth-container button:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 45px rgba(139, 92, 246, 0.5);
+}
+
+.auth-container p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.auth-container span {
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  font-weight: 800;
+  transition: all 0.3s ease;
+  text-decoration: underline;
+  text-decoration-color: rgba(167, 139, 250, 0.5);
+}
+
+.auth-container span:hover {
+  text-decoration-color: #a78bfa;
+  transform: scale(1.05);
+  display: inline-block;
+}
+
+/* Кнопка-ссылка для переключения между входом и регистрацией */
+.link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: underline;
+  text-decoration-color: rgba(167, 139, 250, 0.5);
+  transition: all 0.3s ease;
+  font-weight: 800;
+}
+
+.link-btn:hover {
+  text-decoration-color: #a78bfa;
+  transform: scale(1.05);
+}
+
+/* ========== СКРОЛЛБАР ========== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6 0%, #6d28d9 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 20px 25px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .top-bar h2 {
+    font-size: 32px;
+  }
+  
+  .card {
+    padding: 25px;
+  }
+  
+  .drink-item {
+    flex-wrap: wrap;
+  }
+  
+  .auth-container {
+    margin: 50px auto;
+    padding: 40px 30px;
+  }
+  
+  .auth-container h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .top-bar h2 {
+    font-size: 24px;
+  }
+  
+  .card h2 {
+    font-size: 24px;
+  }
+}
+
+/* ========== SEARCH BAR ========== */
+.search-bar {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 4px rgba(167, 139, 250, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.5);
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(107, 114, 128, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(107, 114, 128, 0.5);
+}
+
+/* ========== FILTERS SECTION ========== */
+.filters-section {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filters-section label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.filters-section select {
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filters-section select:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+/* ========== ORDER CARD ========== */
+.order-card {
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
 }

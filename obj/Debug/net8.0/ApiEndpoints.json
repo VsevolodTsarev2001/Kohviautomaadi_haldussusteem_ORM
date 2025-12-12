@@ -24,8 +24,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Kohviautomaadi_haldussusteem_ORM.Models.User",
+        "Name": "request",
+        "Type": "Kohviautomaadi_haldussusteem_ORM.Models.RegisterRequest",
         "IsRequired": true
       }
     ],

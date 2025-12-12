@@ -5,6 +5,11 @@ import OrderHistory from "./components/OrderHistory";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import WorkerPanel from "./components/WorkerPanel";
+import OrderManagement from "./components/OrderManagement";
+import SearchBar from "./components/SearchBar";
+import StatisticsDashboard from "./components/StatisticsDashboard";
+import PromocodeManager from "./components/PromocodeManager";
+import { API_BASE_URL } from "./config";
 import "./App.css";
 
 function App() {
@@ -32,22 +37,58 @@ function App() {
   };
 
   // Напитки (видят оба)
-  const [drinks,setDrinks] = useState([
-    {id:1, joogiNimi:"Latte", hind:3.8, kogus:15, kirjeldus:"Mõnus pehme latte"},
-    {id:2, joogiNimi:"Espresso", hind:2.5, kogus:0, kirjeldus:"Tugev kibe shot"},
-    {id:3, joogiNimi:"Cappuccino", hind:3.2, kogus:10, kirjeldus:"Kakaoga peal"}
-  ]);
+  const [drinks,setDrinks] = useState([]);
+  const [categories, setCategories] = useState([]);
   
   // История заказов клиента
   const [orders,setOrders]=useState([]);
 
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
+    console.log("Loaded user from localStorage:", savedUser);
     if (savedUser) setUser(savedUser);
+    
+    // Загрузка напитков из API
+    loadDrinks();
+    
+    // Загрузка категорий
+    loadCategories();
   }, []);
+
+  const loadDrinks = async (filters = {}) => {
+    try {
+      const params = new URLSearchParams();
+      if (filters.search) params.append('search', filters.search);
+      if (filters.sortBy) params.append('sortBy', filters.sortBy);
+      if (filters.categoryId) params.append('categoryId', filters.categoryId);
+      if (filters.inStock) params.append('inStock', 'true');
+      
+      const url = `${API_BASE_URL}/Drinks${params.toString() ? '?' + params.toString() : ''}`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        setDrinks(data);
+      }
+    } catch (err) {
+      console.error("Ошибка загрузки напитков:", err);
+    }
+  };
+
+  const loadCategories = async () => {
+    try {
+      const res = await fetch(`${API_BASE_URL}/Categories`);
+      if (res.ok) {
+        const data = await res.json();
+        setCategories(data);
+      }
+    } catch (err) {
+      console.error("Ошибка загрузки категорий:", err);
+    }
+  };
 
   const logout = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("token"); // Удаляем и отдельный токен
     setUser(null);
   };
 
@@ -68,14 +109,30 @@ function App() {
       </header>
 
       {/* Töötaja vaade */}
-      {user.role==="worker" && <WorkerPanel drinks={drinks} setDrinks={setDrinks}/>}
+      {user.role==="worker" && (
+        <>
+          <WorkerPanel drinks={drinks} setDrinks={setDrinks}/>
+          <OrderManagement />
+          <PromocodeManager />
+          <StatisticsDashboard />
+        </>
+      )}
 
 
       {/* Üldine kasutajaliides */}
       <div className="container">
+        {/* Панель поиска и фильтрации */}
+        <div className="card" style={{ gridColumn: '1 / -1' }}>
+          <SearchBar 
+            onSearch={loadDrinks} 
+            categories={categories}
+          />
+        </div>
+        
         <div className="card"><DrinkList drinks={drinks}/></div>
         {user.role==="client" && (
           <div className="card">
+            {console.log("Passing userId to OrderForm:", user.id)}
             <OrderForm drinks={drinks} userId={user.id} onOrderCreated={addOrder}/>
           </div>
         )}
@@ -84,7 +141,7 @@ function App() {
       {/* Klient – tellimuste ajalugu */}
       {user.role==="client" && (
         <div className="card">
-          <OrderHistory orders={orders} onRepeatOrder={addOrder}/>
+          <OrderHistory userId={user.id} />
         </div>
       )}
     </div>

@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/RegisterRequest"
               }
             }
           }
@@ -523,13 +523,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "orderId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "order": {
-            "$ref": "#/components/schemas/Order"
-          },
           "drinkId": {
             "type": "integer",
             "format": "int32"
@@ -537,7 +530,36 @@
           "drink": {
             "$ref": "#/components/schemas/Drink"
           },
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order"
+          },
           "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "nimi": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleId": {
             "type": "integer",
             "format": "int32"
           }

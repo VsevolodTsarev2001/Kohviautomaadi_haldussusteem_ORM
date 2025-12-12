@@ -6,6 +6,7 @@ C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviautomaadi_haldussusteem_ORM.csproj.CoreCompileInputs.cache
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviautomaadi_haldussusteem_ORM.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviautomaadi_haldussusteem_ORM.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviautomaadi_haldussusteem_ORM.sourcelink.json
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\bin\Debug\net8.0\appsettings.json
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\bin\Debug\net8.0\frontend\package-lock.json
@@ -167,7 +168,6 @@ C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviaut.8595DC1A.Up2Date
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\Kohviautomaadi_haldussusteem_ORM.dll
 C:\Users\opilane\source\repos\Kohviautomaadi_haldussusteem_ORM\obj\Debug\net8.0\refint\Kohviautomaadi_haldussusteem_ORM.dll

@@ -133,7 +133,7 @@ namespace Kohviautomaadi_haldussusteem_ORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Role");
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Kohviautomaadi_haldussusteem_ORM.Models.User", b =>

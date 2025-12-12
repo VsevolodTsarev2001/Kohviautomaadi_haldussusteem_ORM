@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Login from "./Login";
 import Register from "./Register";
+import "../App.css";
+
 
 function AuthPage({ onLogin }) {
   const [mode, setMode] = useState("login");

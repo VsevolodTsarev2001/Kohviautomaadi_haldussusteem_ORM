@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kohviautomaadi_haldussusteem_ORM.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251211150118_ArticleUpredate")]
-    partial class ArticleUpredate
+    [Migration("20251212063350_Ribok")]
+    partial class Ribok
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,4 +1,6 @@
 import React from 'react';
+import "../App.css";
+
 
 export default function DrinkList({ drinks }) {
   return (
@@ -7,7 +9,7 @@ export default function DrinkList({ drinks }) {
       <ul>
         {drinks.filter(d => d.kogus > 0).map(drink => (
           <li key={drink.id} className="drink-item">
-            <span><b>{drink.joogiNimi}</b> — {drink.kogus} tk</span>
+            <span><b>{drink.joogiNimi}</b> — {drink.price ? `${drink.price.toFixed(2)}€` : ''} — {drink.kogus} tk</span>
           </li>
         ))}
       </ul>

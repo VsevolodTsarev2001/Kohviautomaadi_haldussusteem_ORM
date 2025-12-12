@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import './App.css';
+import { forceStyles } from './forceStyles';
 import reportWebVitals from './reportWebVitals';
+
+// ПРИНУДИТЕЛЬНО ПРИМЕНЯЕМ СТИЛИ
+forceStyles();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

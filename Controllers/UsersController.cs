@@ -1,10 +1,14 @@
 ﻿using Kohviautomaadi_haldussusteem_ORM.Data;
 using Kohviautomaadi_haldussusteem_ORM.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kohviautomaadi_haldussusteem_ORM.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
+    [Authorize(Roles = "worker")] // Только worker может управлять пользователями
     public class UsersController : BaseController
     {
         public UsersController(ApplicationDbContext db) : base(db) { }

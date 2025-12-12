@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace Kohviautomaadi_haldussusteem_ORM.Controllers
 {
@@ -23,25 +24,35 @@ namespace Kohviautomaadi_haldussusteem_ORM.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(User user)
+        public async Task<IActionResult> Register([FromBody] RegisterRequest request)
         {
-            // Задаём роль по умолчанию (2 = client), если не указана
-            if (user.RoleId == 0)
-                user.RoleId = 2;
+            var role = await _db.Roles.FindAsync(request.RoleId);
+            if (role == null)
+                return BadRequest("Указанная роль не существует.");
 
-            // Хешируем пароль
-            user.Password = _passwordHasher.HashPassword(user, user.Password);
+            var user = new User
+            {
+                Nimi = request.Nimi,
+                Email = request.Email,
+                RoleId = request.RoleId
+            };
+
+            user.Password = _passwordHasher.HashPassword(user, request.Password);
 
             _db.Users.Add(user);
             await _db.SaveChangesAsync();
 
-            return Ok(new { user.Id, user.Nimi, user.Email, RoleId = user.RoleId });
+            return Ok(new { message = "Регистрация успешна" });
         }
+
+
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            var user = _db.Users.FirstOrDefault(x => x.Email == request.Email);
+            var user = _db.Users
+                .Include(u => u.Role)
+                .FirstOrDefault(x => x.Email == request.Email);
             if (user == null) return Unauthorized("Пользователь не найден");
 
             var result = _passwordHasher.VerifyHashedPassword(user, user.Password, request.Password);
